@@ -626,6 +626,7 @@
         <div class="container">
             <h2>Contact Me</h2>
             <div class="contact-grid">
+                <!-- Contact Form -->
                 <div class="contact-form">
                     <div class="form-group">
                         <input type="text" id="name" placeholder="Full Name" required>
@@ -639,6 +640,7 @@
                     <button class="btn-submit" id="sendBtn">Send Message</button>
                 </div>
 
+                <!-- Contact Info -->
                 <div class="contact-info">
                     <div class="contact-avatar">👨‍💻</div>
                     <h3>Sahan Maduranga</h3>
@@ -650,18 +652,16 @@
         </div>
     </section>
 
+
     <footer>
         <p>© 2025 Sahan Maduranga. All rights reserved.</p>
     </footer>
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-    // Initialize EmailJS
-    (function(){
-        emailjs.init('O3f1i0XVc2t9_X7cn');
-    })();
+    // Replace with your EmailJS public key
+    emailjs.init('O3f1i0XVc2t9_X7cn'); 
 
-    // Send email on button click
     document.getElementById('sendBtn').addEventListener('click', function(e) {
         e.preventDefault();
 
@@ -677,7 +677,6 @@
             })
             .then(function(response) {
                 alert('Message sent successfully!');
-                // Clear form
                 document.getElementById('name').value = '';
                 document.getElementById('email').value = '';
                 document.getElementById('message').value = '';
