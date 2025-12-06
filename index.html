@@ -627,18 +627,16 @@
             <h2>Contact Me</h2>
             <div class="contact-grid">
                 <div class="contact-form">
-                    <form action="send_email.php" method="POST">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="text" id="name" placeholder="Full Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="email" id="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Message" required></textarea>
+                        <textarea id="message" placeholder="Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">Send Message</button>
-                    </form>
+                    <button class="btn-submit" id="sendBtn">Send Message</button>
                 </div>
 
                 <div class="contact-info">
@@ -655,51 +653,54 @@
     <footer>
         <p>© 2025 Sahan Maduranga. All rights reserved.</p>
     </footer>
+    <div class="contact-form">
+    <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+        <textarea id="message" placeholder="Message" required></textarea>
+    </div>
+    <button class="btn-submit" id="sendBtn">Send Message</button>
+</div>
 
-    <script>
-        var menuToggle = document.getElementById('menuToggle');
-        var navLinks = document.getElementById('navLinks');
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS
+    (function(){
+        emailjs.init('5qAp0pJHWisYTT-HW');
+    })();
 
-        menuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
+    // Send email on button click
+    document.getElementById('sendBtn').addEventListener('click', function(e) {
+        e.preventDefault();
 
-        var links = document.querySelectorAll('.nav-links a');
-        
-        links.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                var target = document.querySelector(link.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-                
-                links.forEach(function(l) {
-                    l.classList.remove('active');
-                });
-                link.classList.add('active');
-                
-                navLinks.classList.remove('active');
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if(name && email && message){
+            emailjs.send('service_xq4ht4n', 'template_ijh04u6', {
+                from_name: name,
+                from_email: email,
+                message: message
+            })
+            .then(function(response) {
+                alert('Message sent successfully!');
+                // Clear form
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            }, function(error) {
+                alert('Failed to send message. Please try again.');
+                console.error(error);
             });
-        });
-
-        window.addEventListener('scroll', function() {
-            var current = '';
-            var sections = document.querySelectorAll('section');
-            
-            sections.forEach(function(section) {
-                var sectionTop = section.offsetTop;
-                var sectionHeight = section.clientHeight;
-                if (window.scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            links.forEach(function(link) {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+        } else {
+            alert('Please fill all fields.');
+        }
+    });
+</script>
 </body>
 </html>
