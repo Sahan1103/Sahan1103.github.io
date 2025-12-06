@@ -656,10 +656,53 @@
     <footer>
         <p>© 2025 Sahan Maduranga. All rights reserved.</p>
     </footer>
-</body>
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
+        var menuToggle = document.getElementById('menuToggle');
+        var navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        var links = document.querySelectorAll('.nav-links a');
+        
+        links.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+                
+                links.forEach(function(l) {
+                    l.classList.remove('active');
+                });
+                link.classList.add('active');
+                
+                navLinks.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            var current = '';
+            var sections = document.querySelectorAll('section');
+            
+            sections.forEach(function(section) {
+                var sectionTop = section.offsetTop;
+                var sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            links.forEach(function(link) {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
     // Replace with your EmailJS public key
     emailjs.init('O3f1i0XVc2t9_X7cn'); 
 
@@ -690,4 +733,5 @@
         }
     });
 </script>
+</body>
 </html>
