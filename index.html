@@ -657,7 +657,9 @@
         <p>© 2025 Sahan Maduranga. All rights reserved.</p>
     </footer>
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
 <script>
         var menuToggle = document.getElementById('menuToggle');
         var navLinks = document.getElementById('navLinks');
@@ -702,6 +704,18 @@
                 }
             });
         });
+
+        (function(){
+        emailjs.init("O3f1i0XVc2t9_X7cn");
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        emailjs.sendForm("service_xq4ht4n", "template_ijh04u6", this)
+            .then(() => alert("Message sent!"))
+            .catch(err => alert("Error: " + JSON.stringify(err)));
+    });
+
 </script>
 </body>
 </html>
