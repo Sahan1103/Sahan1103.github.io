@@ -705,15 +705,32 @@
             });
         });
 
-        (function(){
+    // ... (Your existing menu toggle and scroll logic) ...
+
+    (function(){
+        // VERIFY THIS PUBLIC KEY: "O3f1i0XVc2t9_X7cn"
         emailjs.init("O3f1i0XVc2t9_X7cn");
     })();
 
     document.getElementById('contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
+        
+        document.getElementById('sendBtn').textContent = 'Sending...';
+        
+        // VERIFY THIS SERVICE ID & TEMPLATE ID: "service_xq4ht4n", "template_ijh04u6"
         emailjs.sendForm("service_xq4ht4n", "template_ijh04u6", this)
-            .then(() => alert("Message sent!"))
-            .catch(err => alert("Error: " + JSON.stringify(err)));
+            .then(() => {
+                alert("Message sent successfully! Check your inbox.");
+                document.getElementById('contact-form').reset(); // Clear the form
+            })
+            .catch(err => {
+                // IMPORTANT: Check the browser console for the error details.
+                console.error("EmailJS Error:", err); 
+                alert("Error sending message. Please check the console for details.");
+            })
+            .finally(() => {
+                document.getElementById('sendBtn').textContent = 'Send Message';
+            });
     });
 
 </script>
