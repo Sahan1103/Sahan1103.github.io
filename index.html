@@ -458,16 +458,29 @@
             text-align: center;
         }
 
-        .contact-avatar {
-            width: 150px;
-            height: 150px;
+        .logo1 {
             background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            border-radius: 50%;
             margin: 0 auto 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
+        }
+        .contact-avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .contact-info h3 {
@@ -760,7 +773,9 @@
 
                 <!-- Contact Info -->
                 <div class="contact-info">
-                    <div class="contact-avatar">👨‍💻</div>
+                    <div class="contact-avatar">
+                        <img src="logo2.png" alt="Logo">
+                    </div>
                     <h3>Sahan Maduranga</h3>
                     <p>Warakapola, Sri Lanka</p>
                     <p>madurangasahan576@gmail.com</p>
