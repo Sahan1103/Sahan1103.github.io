@@ -912,26 +912,38 @@
                     </div>
                 </div>
 
-                <div class="project-card alt1">
-                    <div class="project-image">⚡</div>
+                <div class="project-card alt1" onclick="openProject('vegehut')">
+                    <div class="project-image">
+                        <img src="vegehut1.png">
+                    </div>
                     <div class="project-info">
-                        <h3>D Creates</h3>
-                        <p>Full-stack MERN application with authentication and CRUD operations.</p>
+                        <h3>VegeHut</h3>
+                        <p>VegeHut is a web platform that connects farmers with buyers, making vegetable trading faster, easier, and more transparent.</p>
                         <div class="project-tags">
-                            <span class="tag">MERN</span>
-                            <span class="tag">OAuth</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Git & GitHub</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card alt2">
-                    <div class="project-image">🛒</div>
+                <div class="project-card alt2" onclick="openProject('tuition')">
+                    <div class="project-image">
+                        <img src="tuision1.png">
+                    </div>
                     <div class="project-info">
-                        <h3>BuyHive</h3>
-                        <p>E-commerce platform with payment integration and inventory management.</p>
+                        <h3>Tuition Management System</h3>
+                        <p>Java-based tuition management system for handling students, courses, payments, and reports with an easy-to-use desktop interface.</p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Stripe</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Java Swing</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">CSV/Text Files</span>
+                            <span class="tag">Git & GitHub</span>
                         </div>
                     </div>
                 </div>
@@ -1134,6 +1146,46 @@
             "portfolio4.png"
         ]
 
+    },
+
+     vegehut: {
+
+        title: "VegeHut",
+
+        description:
+            "<br>VegeHut is a web-based platform designed to connect Sri Lankan farmers directly with bulk vegetable buyers. The system helps farmers list and manage their vegetables with details such as price, quantity, and images, while buyers can easily browse and search available products.<br><br>"+
+            "The platform includes secure user authentication, real-time product updates, search and filtering, seller management, and product editing. It was developed using HTML, CSS, JavaScript, PHP, Firebase, and SQL to create a simple and efficient digital marketplace for agricultural trading.<br><br>"+
+            "Technologies: HTML, CSS, JavaScript, PHP, Firebase, SQL, Git & GitHub.",
+
+        images: [
+            "vegehut.png",
+            "vegehut1.png",
+            "vegehut2.png",
+            "vegehut3.png",
+            "vegehut4.png"
+        ]
+
+    },
+
+    tuition: {
+
+        title: "Tuition Management System",
+
+        description:
+            "<br>A Java-based desktop application designed to simplify and automate the management of tuition classes. The system provides a centralized platform for managing students, courses, multi-course enrollments, and payments.<br><br>"+
+            "Built using Java, Java Swing, OOP, and MVC architecture, the application includes features such as student registration, course management, payment and balance tracking, fast search, report generation, and file-based data storage. It helps reduce manual work, improve data accuracy, and make tuition class management faster and more organized.<br><br>"+
+            "Technologies: Java, Java Swing, OOP, CSV/Text Files, Git & GitHub.",
+
+        images: [
+            "tuision1.png",
+            "tuision2.png",
+            "tuision3.png",
+            "tuision4.png",
+            "tuision5.png",
+            "tuision6.png",
+            "tuision7.png"
+        ]
+
     }
 
 };
@@ -1154,7 +1206,7 @@ function openProject(projectName) {
     document.getElementById("modalProjectTitle").textContent =
         currentProject.title;
 
-    document.getElementById("modalProjectDescription").textContent =
+    document.getElementById("modalProjectDescription").innerHTML =
         currentProject.description;
 
     document.getElementById("totalImages").textContent =
