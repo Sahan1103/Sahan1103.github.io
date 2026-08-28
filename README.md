@@ -28,13 +28,9 @@ This portfolio provides a professional online presence where visitors can learn 
 
 | Category            | Technologies           |
 | ------------------- | ---------------------- |
-| **Frontend**        | HTML, CSS, JavaScript  |
-| **Programming**     | Java, C, JavaScript    |
-| **Backend**         | PHP                    |
-| **Database**        | SQL                    |
-| **Services**        | Firebase, EmailJS      |
+| **Frontend**        | HTML, CSS, JavaScript  |                    |
+| **Services**        | EmailJS                |
 | **Version Control** | Git & GitHub           |
-| **Design**          | Photoshop, Illustrator |
 
 ---
 
