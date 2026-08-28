@@ -616,7 +616,7 @@
 
     background: rgba(255, 255, 255, 0.1);
 
-    color: white;
+    color: rgb(255, 255, 255);
 
     font-size: 28px;
 
@@ -675,7 +675,7 @@
 
     background: rgba(255, 255, 255, 0.15);
 
-    color: white;
+    color: rgb(0, 0, 0);
 
     font-size: 24px;
 
@@ -995,6 +995,11 @@
                 Project description
             </p>
 
+            <a id="githubLink" href="#" target="_blank" class="github-btn">
+                <i class="fa-brands fa-github"></i>
+                View Source Code
+            </a>
+
         </div>
 
     </div>
@@ -1140,7 +1145,7 @@
 
         description:
             "<br>A modern and responsive personal portfolio website developed to showcase my skills, education, services, and projects. It features a clean dark-themed UI, smooth navigation, interactive project galleries, responsive design, and a contact form integrated with EmailJS. Built using HTML, CSS, and JavaScript.<br><br>"+
-            "Technologies: HTML, CSS, JavaScript,EmailJS, Git & GitHub.",
+            "Technologies: HTML, CSS, JavaScript,EmailJS, Git & GitHub.<br><br>",
 
         images: [
             "portfolio.png",
@@ -1148,7 +1153,9 @@
             "portfolio2.png",
             "portfolio3.png",
             "portfolio4.png"
-        ]
+        ],
+
+         github: "https://github.com/Sahan1103/Sahan1103.github.io.git"
 
     },
 
@@ -1159,7 +1166,7 @@
         description:
             "<br>VegeHut is a web-based platform designed to connect Sri Lankan farmers directly with bulk vegetable buyers. The system helps farmers list and manage their vegetables with details such as price, quantity, and images, while buyers can easily browse and search available products.<br><br>"+
             "The platform includes secure user authentication, real-time product updates, search and filtering, seller management, and product editing. It was developed using HTML, CSS, JavaScript, PHP, Firebase, and SQL to create a simple and efficient digital marketplace for agricultural trading.<br><br>"+
-            "Technologies: HTML, CSS, JavaScript, PHP, Firebase, SQL, Git & GitHub.",
+            "Technologies: HTML, CSS, JavaScript, PHP, Firebase, SQL, Git & GitHub.<br><br>",
 
         images: [
             "vegehut.png",
@@ -1167,7 +1174,9 @@
             "vegehut2.png",
             "vegehut3.png",
             "vegehut4.png"
-        ]
+        ],
+
+        github: "https://github.com/Sahan1103/VegeHut.git"
 
     },
 
@@ -1178,7 +1187,7 @@
         description:
             "<br>A Java-based desktop application designed to simplify and automate the management of tuition classes. The system provides a centralized platform for managing students, courses, multi-course enrollments, and payments.<br><br>"+
             "Built using Java, Java Swing, OOP, and MVC architecture, the application includes features such as student registration, course management, payment and balance tracking, fast search, report generation, and file-based data storage. It helps reduce manual work, improve data accuracy, and make tuition class management faster and more organized.<br><br>"+
-            "Technologies: Java, Java Swing, OOP, CSV/Text Files, Git & GitHub.",
+            "Technologies: Java, Java Swing, OOP, CSV/Text Files, Git & GitHub.<br><br>",
 
         images: [
             "tuision1.png",
@@ -1188,7 +1197,9 @@
             "tuision5.png",
             "tuision6.png",
             "tuision7.png"
-        ]
+        ],
+
+        github: "https://github.com/Sahan1103/Tution_Management_System.git"
 
     }
 
@@ -1215,6 +1226,9 @@ function openProject(projectName) {
 
     document.getElementById("totalImages").textContent =
         currentProject.images.length;
+
+    document.getElementById("githubLink").href =
+        currentProject.github;
 
     showImage();
 
