@@ -300,16 +300,43 @@
         }
 
         .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
         }
 
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+        .skill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 18px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill i {
+            font-size: 35px;
+            color: #60a5fa;
+        }
+
+        .skill span {
             font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            background: rgba(96, 165, 250, 0.1);
+            border-color: #60a5fa;
+        }
+
+        .skill:hover i {
+            transform: scale(1.15);
         }
 
         .service-card {
@@ -347,6 +374,11 @@
             background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
         }
 
         .project-image { 
@@ -534,6 +566,9 @@
             h2 {
                 font-size: 2rem;
             }
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }   
         }
 
         .logo {
@@ -559,6 +594,12 @@
         .logo span {
             font-size: 1.5rem;
             font-weight: bold;
+        }
+
+        @media (max-width: 400px) {
+            .skills {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         /* Project Popup */
@@ -732,6 +773,25 @@
 
     font-size: 1rem;
 }
+
+.see-more {
+    display: block;
+    width: 130px;
+    margin: 20px auto 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.see-more:hover {
+    background: #60a5fa;
+    color: white;
+    transform: translateY(-2px);
+}
     </style>
 </head>
 <body>
@@ -760,7 +820,7 @@
     <section id="home">
         <div class="container">
             <div class="profile-pic">
-                <img src="mypicture.jpg">
+                <img src="my.jpeg">
             </div>
             <p class="intro">Hello I'm</p>
             <h1 class="name">Sahan Maduranga</h1>
@@ -833,15 +893,62 @@
                 <div class="card">
                     <h4>Skills</h4>
                     <div class="skills">
-                        <span class="skill-tag">Microsoft Office</span>
-                        <span class="skill-tag">Adobe Photoshop</span>
-                        <span class="skill-tag">Adobe Illustrator</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Java-Script</span>
+
+                        <div class="skill">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-brands fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-brands fa-java"></i>
+                            <span>Java</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-solid fa-code"></i>
+                            <span>C</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-brands fa-microsoft"></i>
+                            <span>Microsoft Office</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-solid fa-paintbrush"></i>
+                            <span>Photoshop</span>
+                        </div>
+
+                        <div class="skill">
+                            <i class="fa-solid fa-pen-nib"></i>
+                            <span>Illustrator</span>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -897,7 +1004,7 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="grid">
-                <div class="project-card" onclick="openProject('portfolio')">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="portfolio.png" alt="Portfolio Website">
                     </div>
@@ -911,10 +1018,13 @@
                             <span class="tag">EmailJS</span>
                             <span class="tag">Git & GitHub</span>
                         </div>
+                        <button class="see-more" onclick="openProject('portfolio')">
+                            See More
+                        </button>
                     </div>
                 </div>
 
-                <div class="project-card alt1" onclick="openProject('vegehut')">
+                <div class="project-card alt1">
                     <div class="project-image">
                         <img src="vegehut1.png">
                     </div>
@@ -930,10 +1040,13 @@
                             <span class="tag">Firebase</span>
                             <span class="tag">Git & GitHub</span>
                         </div>
+                        <button class="see-more" onclick="openProject('vegehut')">
+                            See More
+                        </button>
                     </div>
                 </div>
 
-                <div class="project-card alt2" onclick="openProject('tuition')">
+                <div class="project-card alt2">
                     <div class="project-image">
                         <img src="tuision1.png">
                     </div>
@@ -947,6 +1060,9 @@
                             <span class="tag">CSV/Text Files</span>
                             <span class="tag">Git & GitHub</span>
                         </div>
+                        <button class="see-more" onclick="openProject('tuition')">
+                            See More
+                        </button>
                     </div>
                 </div>
             </div>
