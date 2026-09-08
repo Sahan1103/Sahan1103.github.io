@@ -17,9 +17,6 @@ export const DeveloperSection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
             Developer <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Activity</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Committed to disciplined version control workflows, semantic commits, modular repositories, and open source collaboration on GitHub.
-          </p>
         </div>
 
         {/* Profile Banner & Metrics */}
@@ -35,9 +32,6 @@ export const DeveloperSection: React.FC = () => {
                   Verified Developer
                 </span>
               </div>
-              <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                {githubProfile.bio}
-              </p>
             </div>
           </div>
 
@@ -109,40 +103,6 @@ export const DeveloperSection: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Development Philosophy / Version Control Workflow Box */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
-          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-start gap-3">
-            <div className="p-2 rounded-lg bg-white/5 text-cyan-400 shrink-0 border border-white/10">
-              <Terminal className="w-4 h-4" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-white">Semantic Commit Habits</p>
-              <p className="text-[11px] text-slate-400 mt-0.5">Strict Conventional Commits for transparent version history.</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-start gap-3">
-            <div className="p-2 rounded-lg bg-white/5 text-cyan-400 shrink-0 border border-white/10">
-              <Code2 className="w-4 h-4" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-white">Branch-Based Workflow</p>
-              <p className="text-[11px] text-slate-400 mt-0.5">Feature branching, PR documentation, and test verification.</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-start gap-3">
-            <div className="p-2 rounded-lg bg-white/5 text-cyan-400 shrink-0 border border-white/10">
-              <Sparkles className="w-4 h-4" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-white">Clean Code Discipline</p>
-              <p className="text-[11px] text-slate-400 mt-0.5">Modular component hierarchy and consistent linting rules.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );

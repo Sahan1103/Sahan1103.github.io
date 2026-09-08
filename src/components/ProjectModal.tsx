@@ -78,7 +78,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-project-title"
-        className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto bg-[#050505]/85 backdrop-blur-md"
+        className="fixed inset-0 z-[100] flex items-center justify-center pt-54 pb-8 px-4 sm:px-6 overflow-y-auto bg-[#050505]/85 backdrop-blur-md"
         onClick={(e) => {
           if (e.target === e.currentTarget) onClose();
         }}
@@ -94,9 +94,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {/* Modal Header Bar */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-white/5 backdrop-blur-md">
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono text-cyan-300 bg-white/10 border border-white/20">
-                {project.category}
-              </span>
               <span className="text-xs font-mono text-slate-400">
                 Project Showcase
               </span>

@@ -107,9 +107,6 @@ export const Contact: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
             Let's Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Together</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Interested in discussing software development projects, technical collaborations, or consulting? Drop me a message.
-          </p>
         </div>
 
         {/* Contact Layout Grid */}
@@ -122,9 +119,6 @@ export const Contact: React.FC = () => {
               <h3 className="text-2xl font-bold text-white">
                 Contact Details
               </h3>
-              <p className="text-sm text-slate-300 leading-relaxed">
-                I typically respond within 24 hours. Feel free to connect directly via email, phone, or LinkedIn.
-              </p>
             </div>
 
             {/* Contact Items */}
@@ -251,7 +245,6 @@ export const Contact: React.FC = () => {
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
                   <h3 className="text-xl font-bold text-white">Send a Message</h3>
-                  <p className="text-xs text-slate-400">Integrated with verified EmailJS delivery</p>
                 </div>
                 <Sparkles className="w-5 h-5 text-cyan-400" />
               </div>
@@ -349,7 +342,7 @@ export const Contact: React.FC = () => {
                   id="contact-message"
                   name="message"
                   required
-                  rows={5}
+                  rows={3}
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Write your message, project specifications, or questions here..."

@@ -43,27 +43,28 @@ export const emailJsConfig = {
 
 export const skillsData: SkillItem[] = [
   // Existing Core Skills
-  { name: "JavaScript", category: "Frontend", icon: "Code2", level: 85, isCurrent: true },
-  { name: "HTML5", category: "Frontend", icon: "FileCode", level: 95, isCurrent: true },
-  { name: "CSS3", category: "Frontend", icon: "Palette", level: 90, isCurrent: true },
-  { name: "PHP", category: "Backend", icon: "Server", level: 80, isCurrent: true },
-  { name: "Java", category: "Programming", icon: "Cpu", level: 82, isCurrent: true },
-  { name: "C Programming", category: "Programming", icon: "Terminal", level: 75, isCurrent: true },
-  { name: "SQL", category: "Backend", icon: "Database", level: 78, isCurrent: true },
-  { name: "Firebase", category: "Backend", icon: "Flame", level: 75, isCurrent: true },
-  { name: "Git", category: "Tools", icon: "GitBranch", level: 85, isCurrent: true },
-  { name: "GitHub", category: "Tools", icon: "Github", level: 88, isCurrent: true },
-  { name: "Photoshop", category: "Design", icon: "Image", level: 85, isCurrent: true },
-  { name: "Illustrator", category: "Design", icon: "PenTool", level: 80, isCurrent: true },
-  { name: "Microsoft Office", category: "Tools", icon: "FileSpreadsheet", level: 90, isCurrent: true },
+  { name: "JavaScript", category: "Frontend", icon: "Code2", isCurrent: true },
+  { name: "HTML5", category: "Frontend", icon: "FileCode", isCurrent: true },
+  { name: "CSS3", category: "Frontend", icon: "Palette", isCurrent: true },
+  { name: "PHP", category: "Backend", icon: "Server", isCurrent: true },
+  { name: "Java", category: "Programming", icon: "Cpu", isCurrent: true },
+  { name: "C Programming", category: "Programming", icon: "Terminal", isCurrent: true },
+  { name: "SQL", category: "Backend", icon: "Database", isCurrent: true },
+  { name: "Firebase", category: "Backend", icon: "Flame", isCurrent: true },
+  { name: "Git", category: "Tools", icon: "GitBranch", isCurrent: true },
+  { name: "GitHub", category: "Tools", icon: "Github", isCurrent: true },
+  { name: "Photoshop", category: "Design", icon: "Image", isCurrent: true },
+  { name: "Illustrator", category: "Design", icon: "PenTool", isCurrent: true },
+  { name: "Microsoft Office", category: "Tools", icon: "FileSpreadsheet", isCurrent: true },
   
-  // Future / Expanding Tech Stack
-  { name: "React.js", category: "Future Technologies", icon: "Layers", level: 70, isCurrent: false },
-  { name: "Tailwind CSS", category: "Future Technologies", icon: "Wind", level: 75, isCurrent: false },
-  { name: "Node.js", category: "Future Technologies", icon: "Box", level: 65, isCurrent: false },
-  { name: "Express.js", category: "Future Technologies", icon: "Network", level: 60, isCurrent: false },
-  { name: "TypeScript", category: "Future Technologies", icon: "FileText", level: 65, isCurrent: false },
-  { name: "MongoDB", category: "Future Technologies", icon: "DatabaseZap", level: 60, isCurrent: false },
+  { name: "React.js", category: "Frontend", icon: "Layers", isCurrent: true },
+  { name: "Tailwind CSS", category: "Design", icon: "Wind", isCurrent: true },
+  { name: "Node.js", category: "Backend", icon: "Box", isCurrent: true },
+  { name: "Express.js", category: "Backend", icon: "Network", isCurrent: true },
+  { name: "TypeScript", category: "Programming", icon: "FileText", isCurrent: true },
+  { name: "MongoDB", category: "Backend", icon: "DatabaseZap", isCurrent: true },
+  //if iscurrent=false show as "Learning" in the UI"
+
 ];
 
 export const educationData: EducationItem[] = [
@@ -74,16 +75,16 @@ export const educationData: EducationItem[] = [
     period: "2024 - Present",
     description: "Enrolled in the premier honours degree program covering software architecture, full-stack systems engineering, data structures and algorithms, object-oriented design, databases, and network computing.",
     gradeOrType: "Undergraduate Degree",
-    skillsAcquired: ["Software Engineering", "Algorithms", "Object-Oriented Design", "Databases", "Web Architecture"]
+    skillsAcquired: ["Software Engineering", "Algorithms", "Object-Oriented Design", "Databases", "Web Architecture", "Network Engineering"]
   },
   {
     id: "al-urapola",
     degree: "GCE Advanced Level (Engineering Technology Stream)",
     institution: "WP/GM/Urapola National College",
     period: "2021 - 2023",
-    description: "Completed secondary education in the specialized Engineering Technology pathway, developing foundations in mathematical analysis, systems logic, science for technology, and technical problem solving.",
+    description: "Completed secondary education in the specialized Engineering Technology pathway, developing foundations in mathematical analysis, systems logic, science for technology, Information and Communication Technology and technical problem solving.",
     gradeOrType: "A/L Certification",
-    skillsAcquired: ["Engineering Technology", "Science for Technology", "Mathematics", "Technical Drawing"]
+    skillsAcquired: ["Engineering Technology", "Science for Technology", "Mathematics", "Technical Drawing", "Information and Communication Technology"]
   },
   {
     id: "dit-imbs",
@@ -105,7 +106,7 @@ export const educationData: EducationItem[] = [
   },
   {
     id: "die-esoft",
-    degree: "Diploma in English",
+    degree: "Diploma in English (DiE)",
     institution: "ESOFT Metro Campus",
     period: "2020",
     description: "Intensive spoken and written professional communication training, technical documentation, presentation delivery, and professional correspondence.",
@@ -113,68 +114,13 @@ export const educationData: EducationItem[] = [
     skillsAcquired: ["Technical Writing", "Professional Communication", "Public Speaking"]
   },
   {
-    id: "al-urapola",
-    degree: "GCE Advanced Level (Engineering Technology Stream)",
-    institution: "WP/GM/Urapola National College",
-    period: "2021 - 2023",
-    description: "Completed secondary education in the specialized Engineering Technology pathway, developing foundations in mathematical analysis, systems logic, science for technology, and technical problem solving.",
-    gradeOrType: "A/L Certification",
-    skillsAcquired: ["Engineering Technology", "Science for Technology", "Mathematics", "Technical Drawing"]
-  }
-];
-
-export const servicesData: ServiceItem[] = [
-  {
-    id: "web-dev",
-    title: "Web Development",
-    description: "Building fast, high-performance, and responsive web applications with clean semantic markup, modular architecture, and modern full-stack workflows.",
-    icon: "Code",
-    tools: ["HTML5", "CSS3", "JavaScript", "PHP", "SQL", "React"],
-    features: [
-      "Custom responsive layouts for all viewports",
-      "Dynamic backend integration with PHP & SQL",
-      "Interactive client-side interfaces and forms",
-      "SEO friendly and accessible architecture"
-    ]
-  },
-  {
-    id: "ui-ux",
-    title: "UI/UX Design",
-    description: "Crafting intuitive, user-friendly digital interfaces focused on simplicity, visual balance, smooth user journeys, and micro-interactions.",
-    icon: "Sparkles",
-    tools: ["Photoshop", "Illustrator", "Figma", "Design Systems"],
-    features: [
-      "Wireframing & user flow diagrams",
-      "Design systems & typography hierarchies",
-      "Interactive prototypes & responsive layouts",
-      "Accessible color contrast & visual clarity"
-    ]
-  },
-  {
-    id: "graphic-design",
-    title: "Graphic Design",
-    description: "Delivering distinctive creative identities, digital artwork, promotional graphics, vector illustrations, and brand assets.",
-    icon: "Palette",
-    tools: ["Adobe Photoshop", "Adobe Illustrator", "Vector Graphics"],
-    features: [
-      "Unique custom logo & brand identity design",
-      "High-resolution promotional social media graphics",
-      "Vector illustration & brand collateral",
-      "Marketing posters, flyers, and banners"
-    ]
-  },
-  {
-    id: "video-editing",
-    title: "Video Editing",
-    description: "Producing engaging promotional videos, social clips, tutorials, and presentation media with smooth pacing, transitions, and audio balancing.",
-    icon: "Video",
-    tools: ["Adobe Premiere", "After Effects", "Motion Graphics"],
-    features: [
-      "Engaging social media reels & promotional videos",
-      "Color grading, audio cleaning, and soundtrack pacing",
-      "Intro / Outro motion graphics and typography",
-      "Academic & technical project walkthroughs"
-    ]
+    id: "ol-Sanghabodhi",
+    degree: "GCE Ordinary Level Examination",
+    institution: "WP/GM/Sanghabodhi National College",
+    period: "2015 - 2020",
+    description: "Completed secondary education through the G.C.E. Ordinary Level pathway, developing strong foundations in mathematics, science, information and communication technology, Business & Accounting Studies, languages, and problem-solving skills.",
+    gradeOrType: "O/L Certification",
+    skillsAcquired: ["Mathematics", "Science", "Information and Communication Technology", "Technical Drawing", "Business & Accounting Studies"]
   }
 ];
 
@@ -182,8 +128,8 @@ export const projectsData: Project[] = [
   {
     id: "portfolio",
     title: "Portfolio Website",
-    shortDescription: "Modern and responsive developer portfolio website showcasing technical skills, academic journey, interactive project showcases, and EmailJS messaging.",
-    description: "A modern, high-performance personal portfolio website built to showcase my software engineering projects, academic education, services, and technical toolkit. Features smooth scrolling, dark glassmorphism styling, an interactive project modal with responsive screenshot gallery, and a direct contact form powered by EmailJS.",
+    shortDescription: "A responsive personal portfolio website showcasing my skills, services, education, and projects with a modern UI, interactive project gallery, and contact form.",
+    description: "A modern and responsive personal portfolio website developed to showcase my skills, education, services, and projects. It features a clean dark-themed UI, smooth navigation, interactive project galleries, responsive design, and a contact form integrated with EmailJS. Built using HTML, CSS, and JavaScript.",
     category: "Frontend",
     technologies: ["React", "HTML5", "CSS3", "JavaScript", "EmailJS", "Git & GitHub"],
     images: [
@@ -191,7 +137,8 @@ export const projectsData: Project[] = [
       "/portfolio1.png",
       "/portfolio2.png",
       "/portfolio3.png",
-      "/portfolio4.png"
+      "/portfolio4.png",
+      "/portfolio5.png"
     ],
     github: "https://github.com/Sahan1103/Sahan1103.github.io.git",
     liveDemo: "#home",
@@ -205,9 +152,9 @@ export const projectsData: Project[] = [
   },
   {
     id: "vegehut",
-    title: "VegeHut Agriculture Marketplace",
-    shortDescription: "A web platform connecting Sri Lankan farmers directly with bulk vegetable buyers, streamlining agricultural trading with transparency and real-time listings.",
-    description: "VegeHut is a dedicated web platform developed to eliminate intermediaries and directly bridge the gap between local Sri Lankan farmers and bulk vegetable purchasers (markets, retailers, and restaurants). The application allows farmers to create verified profiles, post detailed vegetable listings with quantities, harvest dates, pricing, and photos, while registered wholesale buyers can search, filter by region, and place inquiries.\n\nThe system incorporates secure user authentication, database management with SQL, real-time product updates via Firebase, and a PHP backend pipeline.",
+    title: "VegeHut",
+    shortDescription: "VegeHut is a web platform that connects farmers with buyers, making vegetable trading faster, easier, and more transparent.",
+    description: "VegeHut is a web-based platform designed to connect Sri Lankan farmers directly with bulk vegetable buyers. The system helps farmers list and manage their vegetables with details such as price, quantity, and images, while buyers can easily browse and search available products.\n\nThe platform includes secure user authentication, real-time product updates, search and filtering, seller management, and product editing. It was developed using HTML, CSS, JavaScript, PHP, Firebase, and SQL to create a simple and efficient digital marketplace for agricultural trading.",
     category: "Full Stack",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL", "Firebase", "Git & GitHub"],
     images: [
@@ -229,8 +176,8 @@ export const projectsData: Project[] = [
   {
     id: "tuition",
     title: "Tuition Management System",
-    shortDescription: "A robust Java desktop application simplifying student enrollments, course catalogs, fee payments, and automated report generation.",
-    description: "A desktop software application engineered in Java using Java Swing and Object-Oriented Programming (OOP) principles to simplify and automate tuition institute administrative overhead. The system features a multi-module architecture managing student registries, course scheduling, multi-class enrollment, fee payment collection, arrears tracking, and automated financial report generation.\n\nBuilt adhering to Model-View-Controller (MVC) design patterns with file-based persistent storage (CSV / text files), it provides high data integrity, quick search indexing, and offline standalone reliability.",
+    shortDescription: "Java-based tuition management system for handling students, courses, payments, and reports with an easy-to-use desktop interface.",
+    description: "A Java-based desktop application designed to simplify and automate the management of tuition classes. The system provides a centralized platform for managing students, courses, multi-course enrollments, and payments.\n\nBuilt using Java, Java Swing, OOP, and MVC architecture, the application includes features such as student registration, course management, payment and balance tracking, fast search, report generation, and file-based data storage. It helps reduce manual work, improve data accuracy, and make tuition class management faster and more organized.",
     category: "Desktop App",
     technologies: ["Java", "Java Swing", "OOP", "MVC Architecture", "CSV/Text Files", "Git & GitHub"],
     images: [
@@ -256,7 +203,6 @@ export const projectsData: Project[] = [
 export const githubProfile = {
   username: "Sahan1103",
   url: "https://github.com/Sahan1103",
-  bio: "ICT Undergraduate @ USJ | Junior Full Stack Developer | Java & Web Systems",
   repositories: [
     {
       name: "VegeHut",

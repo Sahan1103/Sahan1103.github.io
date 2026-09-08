@@ -30,33 +30,9 @@ export const Projects: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
             Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Projects</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Real-world applications showcasing full-stack web platforms, Java desktop software, and responsive web systems with clean architecture.
-          </p>
         </div>
 
-        {/* Category Filter Controls */}
-        <div className="flex items-center justify-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-1.5 p-1.5 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-md">
-            {categories.map((category) => {
-              const isSelected = selectedCategory === category;
-              return (
-                <button
-                  key={category}
-                  id={`project-filter-${category.toLowerCase().replace(/\s+/g, '-')}`}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all duration-200 cursor-pointer ${
-                    isSelected
-                      ? 'bg-cyan-500 text-black font-bold shadow-md'
-                      : 'text-slate-400 hover:text-white hover:bg-white/5'
-                  }`}
-                >
-                  {category}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+       
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
